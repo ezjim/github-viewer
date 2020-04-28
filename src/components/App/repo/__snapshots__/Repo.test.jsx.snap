@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Repo component renders Repos 1`] = `
-<figure>
-  <figcaption>
-    <p />
-    <p />
-  </figcaption>
-</figure>
+exports[`Repo component renders Repo 1`] = `
+<li>
+  <p>
+    ezjim
+  </p>
+  <p>
+    https://github.com/ezjim
+  </p>
+</li>
 `;

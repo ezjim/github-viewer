@@ -1,15 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`User component renders Repos 1`] = `
+exports[`UserInfo component renders UserInfo 1`] = `
 <figure>
-  <img />
+  <img
+    alt=""
+    src="https://avatars0.githubusercontent.com/u/56773448?v=4"
+  />
   <figcaption>
-    <p />
-    <p />
     <p>
-       
+      ezjim
     </p>
-    <p />
+    <p>
+      Portland
+    </p>
+    <p>
+      0
+    </p>
+    <p>
+      https://github.com/ezjim
+    </p>
   </figcaption>
 </figure>
 `;
