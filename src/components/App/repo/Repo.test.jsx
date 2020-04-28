@@ -1,10 +1,11 @@
+  
 import React from 'react';
 import { shallow } from 'enzyme';
-import User from './User';
+import Repo from './Repo';
 
-describe('User component', () => {
+describe('Repo component', () => {
   it('renders Repos', () => {
-    const wrapper = shallow(<User />);
+    const wrapper = shallow(<Repo />);
     expect(wrapper).toMatchSnapshot();
   });
 });

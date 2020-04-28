@@ -19,4 +19,3 @@ User.propTypes = {
   URL: PropTypes.string.isRequired
 };
 export default User;
-
