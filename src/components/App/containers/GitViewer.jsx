@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from '../repo/User.jsx';
+import User from '../User/User';
 import Repo from '../repo/Repo.jsx';
 import { fetchUserInfo, fetchUserRepos } from '../services/getRepos.jsx';
 
