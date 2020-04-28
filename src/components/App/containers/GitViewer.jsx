@@ -1,33 +1,50 @@
 import React, { Component } from 'react';
 import User from '../User/User';
-import Repo from '../repo/Repo.jsx';
-import { fetchUserInfo, fetchUserRepos } from '../services/getRepos.jsx';
+import UserSearch from '../User/UserSearch';
+import Repos from '../repo/Repos';
+import { fetchUserInfo, fetchUserRepos } from '../repo/services/getRepos.jsx';
 
 
 export default class GitViewer extends Component {
   state = {
-    userInfo: [],
-    userRepos: []
+    username: '',
+    user: {
+      avatar_url: '',
+      login: '',
+      location: '',
+      following: 0,
+      html_url: ''
+    }
+    // repos: []
+    // search: false
   }
 
-  componentDidMount() {
-    fetchUserInfo()
-      .then(userInfo => this.setState({ userInfo }));
-    fetchUserRepos()
-      .then(userRepos => this.setState({ userRepos }));
+  handleUserChange = ({ target }) => {
+    this.setState({ username: target.value });
+  }
+
+  handleUserSubmit = () => {
+    fetchUserInfo(this.state.username);
+    fetchUserRepos(this.state.username)
+      .then(repos => this.setState({ repos, search: true }));
   }
 
   render() {
-    const { userInfo, userRepos } = this.state;
+    let searched = '';
+    if(this.state.search) {
+      searched = 
+      <>
+        <User {...this.state.user} /> 
+        <Repos repos={this.state.repos} />
+      </>;
+    }
     return (
-      <div>
-        <div>
-          <User userInfo={userInfo} />
-        </div>
-        <div>
-          <Repo userRepos={userRepos} />
-        </div>
-      </div>
+      <>
+        <UserSearch username={this.state.username} 
+          onUserChange={this.handleUserChange} 
+          onUserSubmit={this.handleUserSubmit}/>
+        {searched}
+      </>
     );
   }
 }
