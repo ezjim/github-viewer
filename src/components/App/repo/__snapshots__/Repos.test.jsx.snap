@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Repos component renders Repos 1`] = `
+<ul>
+  <Repo
+    html_url="https://github.com/ezjim/about-me"
+    id={233723653}
+    key="233723653"
+    name="about-me"
+  />
+  <Repo
+    html_url="https://github.com/ezjim/bus-mall"
+    id={236626883}
+    key="236626883"
+    name="bus-mall"
+  />
+</ul>
+`;
