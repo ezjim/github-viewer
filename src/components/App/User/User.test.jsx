@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import User from './User.jsx';
 
-describe('UserInfo component', () => {
-  it('renders UserInfo', () => {
+describe('User component', () => {
+  it('renders User', () => {
     const wrapper = shallow(<User
       avatar_url="https://avatars0.githubusercontent.com/u/56773448?v=4"
       login="ezjim"
