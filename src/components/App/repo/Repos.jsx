@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Repo from '../Repo/Repo.jsx';
+import Repo from './Repo';
 
 const Repos = ({ repos }) => {
   const repoData = repos.map(repo => <Repo key={repo.id} {...repo} />);
